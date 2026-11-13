@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="dashboard d-flex">
+        <nav class="side-bar-body position-sticky top-0 vh-100 p-6  d-flex flex-column">
+            <ul class="nav flex-column sidebar-nav fw-bold gap-7">
+                <li>
+                    <div class="d-flex align-items-center ">
+                        <div class="d-flex ">
+                            <img src="imgs/icons/coins-solid-full.png" alt="Logo" width="45" height="45"
+                                class="bg-primary p-2 rounded-4 me-4">
+                            <div>
+                                <h1 class="h4 fw-bold mb-0">مدبّر</h1>
+                                <span class="text-secondary">إدارة أموالك بذكاء</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active d-flex justify-content-between align-items-center" aria-current="page"
+                        href="#">
+                        <img src="imgs/icons/house-solid-full.png" class="nav-tab-imgs" alt="الصفحة الرئيسية">
+                        <span>الصفحة الرئيسية</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" href="#">
+                        <img src="imgs/icons/arrow-right-arrow-left-solid-full.png" class="nav-tab-imgs"
+                            alt="المعاملات">
+                        <span>المعاملات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" href="#">
+                        <img src="imgs/icons/chart-pie-solid-full.png" class="nav-tab-imgs" alt="الميزانيات">
+                        <span>الميزانيات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" href="#">
+                        <img src="imgs/icons/piggy-bank-solid.png" class="nav-tab-imgs" alt="المدخرات">
+                        <span>المدخرات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" href="#">
+                        <img src="imgs/icons/file-invoice-dollar-solid-full.png" class="nav-tab-imgs"
+                            alt="الفواتير الشهرية">
+                        <span>الفواتير الشهرية</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav flex-column sidebar-nav fw-bold gap-7 mt-10">
+                <li class="nav-item fs-sm fg-2">
+                        <span> إجراءات سريعة</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" href="#">
+                        <div class="icon-invoice d-flex justify-content-center align-items-center bg-subtle-primary">
+                                    <img class="sm-square" src="imgs/icons/paper-plane-solid-full.png" alt="">
+                                </div>
+                        <span>ارسال الاموال</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" href="#">
+                        <div class="icon-invoice d-flex justify-content-center align-items-center bg-subtle-success">
+                                    <img class="sm-square" src="imgs/icons/plus-solid-full.png" alt="">
+                                </div>
+                        <span>اداره الاموال</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" href="#">
+                        <div class="icon-invoice d-flex justify-content-center align-items-center bg-muted-accent">
+                                    <img class="sm-square" src="imgs/icons/receipt-solid-full.png" alt="">
+                                </div>
+                        <span>دفع الفاتوره</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" href="#">
+                        <div class="icon-invoice d-flex justify-content-center align-items-center bg-subtle-danger">
+                                    <img class="sm-square" src="imgs/icons/chart-line-solid-full.png" alt="">
+                                </div>
+                        <span>الفواتير الشهرية</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-actions">
+
+        </div>
+        <main class="flex-grow-1 mx-5 pb-5 mt-5">
+            <header class="d-flex align-items-center justify-content-between shadow-lg px-7 py-8 theme-primary mx-3 my-5 rounded-4 p-3">
+                <div class="d-flex align-items-center ">
+                    <div class="d-flex ">
+                        <img src="imgs/icons/coins-solid-full.png" alt="Logo" width="45" height="45"
+                            class="bg-primary p-2 rounded-4 me-4">
+                        <div>
+                            <h1 class="h4 fw-bold mb-0">مدبّر</h1>
+                            <span class="text-secondary">إدارة أموالك بذكاء</span>
+                        </div>
+                    </div>
+                    <div class="ms-5">
+                        <span
+                            class="status bg-muted-success fs-xs fg-success border d-flex align-items-center px-6 py-1 rounded-3 border-success  ms-2">متصل</span>
+                    </div>
+                </div>
+                <div class="d-flex gap-3 align-items-center">
+                    <div
+                        class="d-flex nav-small-imgs p-2 justify-content-center aligh-items-center bg-secondary-subtle border rounded-4 border-dark">
+                        <img class="w-100" src="imgs/icons/magnifying-glass-solid-full.png" alt="magnifying glass">
+                    </div>
+                    <div
+                        class="d-flex nav-small-imgs p-2 justify-content-center aligh-items-center bg-secondary-subtle border rounded-4 border-dark">
+                        <img class="w-100" src="imgs/icons/bell-regular-full.png" alt="magnifying glass">
+                    </div>
+                    <div class="bg-white d-flex justify-content-between gap-4 ms-5 shadow-lg p-5 rounded-5">
+                        <div class="d-flex flex-column align-items-cente justify-content-center">
+                            <h4>اسامه السيد</h4>
+                            <span>حساب مميز</span>
+                        </div>
+                        <div class="sm-imgs d-flex align-items-center justify-content-center bg-white p2 m-2">
+                            <img src="imgs/avatar-1.jpg" class="rounded-4 w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+            <!-- Three Cards -->
+            <div class="container-fluid text-center mb-5">
+                <div class="row">
+                    <div class="container md:col-4">
+                        <div
+                            class="rounded-5 d-flex flex-column text-start p-4 border border-1 border-secondary border-50">
+                            <p class="fg-2">الرصيد الحالي</p>
+                            <p class="fw-bold fs-xl">8,000 جنيه</p>
+                            <span class="fg-success">
+                                <img src="imgs/icons/arrow-down-solid-full-green-up.png" alt="arrow up" width="15"
+                                    height="15">
+                                +2.5%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="container md:col-4">
+                        <div
+                            class="rounded-5 d-flex flex-column text-start p-4 border border-1 border-secondary border-50">
+                            <p class="fg-2">الرصيد الحالي</p>
+                            <p class="fw-bold fs-xl">8,000 جنيه</p>
+                            <span class="fg-success">
+                                <img src="imgs/icons/arrow-down-solid-full-green-up.png" alt="arrow up" width="15"
+                                    height="15">
+                                +2.5%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="container md:col-4">
+                        <div
+                            class="rounded-5 d-flex flex-column text-start p-4 border border-1 border-secondary border-50">
+                            <p class="fg-2">الرصيد الحالي</p>
+                            <p class="fw-bold fs-xl">8,000 جنيه</p>
+                            <span class="fg-success">
+                                <img src="imgs/icons/arrow-down-solid-full-green-up.png" alt="arrow up" width="15"
+                                    height="15">
+                                +2.5%
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Transactions -->
+            <div class="container-fluid text-center mb-5">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card border-subtle border-50 mb-5">
+                            <div class="card-body">
+                                <p class="text-start fw-bold">الأنشطة الحديثة</p>
+                                <div
+                                    class="container border-end p-2 border-4 rounded-5 border-primary theme-primary theme-subtle bg-10">
+                                    <div class="d-flex ">
+                                        <div class="container d-flex gap-3 ">
+                                            <div
+                                                class="d-flex align-items-center justify-content-center flex-shrink-0 purchase-icons-rounded mt-1 pd-1  theme-muted">
+                                                <img class="w-100" src="imgs/icons/user-plus-solid-full.png"
+                                                    alt="User Plus">
+                                            </div>
+                                            <div class="d-flex flex-column align-items-start mb-1">
+                                                <h4 class="card-title fs-sm fg-1">إنشاء حساب توفير جديد</h4>
+                                                <p class="card-text fs-xs fg-2">تم إنشاء حساب توفير بنك الأهلي بنجاح</p>
+
+                                                <span class="card-subtitle fg-3 fs-xs ">منذ ساعة واحدة</span>
+                                            </div>
+                                        </div>
+                                        <span class="fs-xs">حساب</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="container border-end p-2 border-4 rounded-5 border-primary theme-success theme-subtle bg-10">
+                                    <div class="d-flex ">
+                                        <div class="container d-flex gap-3 ">
+                                            <div
+                                                class="d-flex align-items-center justify-content-center flex-shrink-0 purchase-icons-rounded mt-1 pd-1  theme-muted">
+                                                <img class="w-100" src="imgs/icons/credit-card-solid-full-green.png"
+                                                    alt="User Plus">
+                                            </div>
+                                            <div class="d-flex flex-column align-items-start mb-1">
+                                                <h4 class="card-title fs-sm fg-1">إنشاء بطاقة جديدة</h4>
+                                                <p class="card-text fs-xs fg-2">تمت إضافة بطاقة Visa الجديدة ****2847
+                                                </p>
+
+                                                <span class="card-subtitle fg-3 fs-xs ">منذ ساعة واحدة</span>
+                                            </div>
+                                        </div>
+                                        <span class="fs-xs">بطاقة</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="container">
+                                <div class="container mb-5 border-top pt-4 border-subtle border-50">
+                                    <button class="bg-white border-0 fw-bold fg-primary fs-sm" type="button">عرض جميع
+                                        الانشطه</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-subtle border-50 pb-5 px-5">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-start fw-bold">الفواتير الشهرية</p>
+                                    <span class="fs-sm fg-2 fw-bold">عرض الكل</span>
+                                </div>
+                                <div class="container">
+                                    <p class="fw-bold fs-xl">1920 جنية</p>
+                                    <span class="fs-sm fg-3 fw-bold">إجمالي الفواتير الشهرية</span>
+                                </div>
+                            </div>
+
+                            <div class="d-grid tiles gap-5">
+                                <div class="bg-1 rounded-6 p-3 border border-1 border-50 border-subtle">
+                                    <div class="container">
+                                        <div class="d-flex flex-column">
+                                            <div class="container theme-primary theme-subtle icon-rect">
+                                                <img src="imgs/icons/wifi-solid-full.png" class="w-100" />
+                                            </div>
+                                            <span>انترنت</span>
+                                            <p class="fw-bold fs-sm p-0 m-0">1920 جنية</p>
+                                            <span class="fs-sm fg-danger m-0">يستحق في 3 أيام</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-1 rounded-6 p-3 border border-1 border-50 border-subtle">
+                                    <div class="container">
+                                        <div class="d-flex flex-column">
+                                            <div class="container theme-primary theme-subtle icon-rect">
+                                                <img src="imgs/icons/wifi-solid-full.png" class="w-100" />
+                                            </div>
+                                            <span>انترنت</span>
+                                            <p class="fw-bold fs-sm p-0 m-0">1920 جنية</p>
+                                            <span class="fs-sm fg-danger m-0">يستحق في 3 أيام</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-1 rounded-6 p-3 border border-1 border-50 border-subtle">
+                                    <div class="container">
+                                        <div class="d-flex flex-column">
+                                            <div class="container theme-primary theme-subtle icon-rect">
+                                                <img src="imgs/icons/wifi-solid-full.png" class="w-100" />
+                                            </div>
+                                            <span>انترنت</span>
+                                            <p class="fw-bold fs-sm p-0 m-0">1920 جنية</p>
+                                            <span class="fs-sm fg-danger m-0">يستحق في 3 أيام</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-1 rounded-6 p-3 border border-1 border-50 border-subtle">
+                                    <div class="container">
+                                        <div class="d-flex flex-column">
+                                            <div class="container theme-primary theme-subtle icon-rect">
+                                                <img src="imgs/icons/wifi-solid-full.png" class="w-100" />
+                                            </div>
+                                            <span>انترنت</span>
+                                            <p class="fw-bold fs-sm p-0 m-0">1920 جنية</p>
+                                            <span class="fs-sm fg-danger m-0">يستحق في 3 أيام</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-8">
+                        <div class="card border-subtle border-50 pb-5 px-5">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-start fw-bold">المعاملات الأخيرة</p>
+                                    <span class="fs-sm fg-2 fw-bold">عرض الكل</span>
+                                </div>
+                            </div>
+                            <table class="table text-start align-middle">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">المعاملة</th>
+                                        <th scope="col">الفئة</th>
+                                        <th scope="col">التاريخ</th>
+                                        <th scope="col">الحالة</th>
+                                        <th scope="col">المبلغ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <div class="">
+                                                    <img src="imgs/avatar-2.jpg" class="table-rounded shrink-flex" />
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-column align-items-start justify-content-center">
+                                                    <span class="fs-sm">محمود النجار</span>
+                                                    <span class="fs-xs fw-medium fg-2">تحويل أموال</span>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <!-- why does flex here shrink the cell? -->
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3 d-flex">
+                                                    <img src="imgs/icons/arrow-down-solid-full.png"
+                                                        class="pill-icon shrink-flex" />
+                                                    <span class="fs-xs">دخل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-2 fw-bold fs-sm">١٤ أكتوبر ٢٠٢٥</td>
+                                        <td>
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3">
+                                                    <span class="fs-xs">مكتمل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-success fw-bold fs-sm">+350 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <div class="">
+                                                    <img src="imgs/avatar-2.jpg" class="table-rounded shrink-flex" />
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-column align-items-start justify-content-center">
+                                                    <span class="fs-sm">محمود النجار</span>
+                                                    <span class="fs-xs fw-medium fg-2">تحويل أموال</span>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <!-- why does flex here shrink the cell? -->
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3 d-flex">
+                                                    <img src="imgs/icons/arrow-down-solid-full.png"
+                                                        class="pill-icon shrink-flex" />
+                                                    <span class="fs-xs">دخل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-2 fw-bold fs-sm">١٤ أكتوبر ٢٠٢٥</td>
+                                        <td>
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3">
+                                                    <span class="fs-xs">مكتمل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-success fw-bold fs-sm">+350 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <div class="">
+                                                    <img src="imgs/avatar-2.jpg" class="table-rounded shrink-flex" />
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-column align-items-start justify-content-center">
+                                                    <span class="fs-sm">محمود النجار</span>
+                                                    <span class="fs-xs fw-medium fg-2">تحويل أموال</span>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <!-- why does flex here shrink the cell? -->
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3 d-flex">
+                                                    <img src="imgs/icons/arrow-down-solid-full.png"
+                                                        class="pill-icon shrink-flex" />
+                                                    <span class="fs-xs">دخل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-2 fw-bold fs-sm">١٤ أكتوبر ٢٠٢٥</td>
+                                        <td>
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3">
+                                                    <span class="fs-xs">مكتمل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-success fw-bold fs-sm">+350 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <div class="">
+                                                    <img src="imgs/avatar-2.jpg" class="table-rounded shrink-flex" />
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-column align-items-start justify-content-center">
+                                                    <span class="fs-sm">محمود النجار</span>
+                                                    <span class="fs-xs fw-medium fg-2">تحويل أموال</span>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <!-- why does flex here shrink the cell? -->
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3 d-flex">
+                                                    <img src="imgs/icons/arrow-down-solid-full.png"
+                                                        class="pill-icon shrink-flex" />
+                                                    <span class="fs-xs">دخل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-2 fw-bold fs-sm">١٤ أكتوبر ٢٠٢٥</td>
+                                        <td>
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3">
+                                                    <span class="fs-xs">مكتمل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-success fw-bold fs-sm">+350 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <div class="">
+                                                    <img src="imgs/avatar-2.jpg" class="table-rounded shrink-flex" />
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-column align-items-start justify-content-center">
+                                                    <span class="fs-sm">محمود النجار</span>
+                                                    <span class="fs-xs fw-medium fg-2">تحويل أموال</span>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <!-- why does flex here shrink the cell? -->
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3 d-flex">
+                                                    <img src="imgs/icons/arrow-down-solid-full.png"
+                                                        class="pill-icon shrink-flex" />
+                                                    <span class="fs-xs">دخل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-2 fw-bold fs-sm">١٤ أكتوبر ٢٠٢٥</td>
+                                        <td>
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3">
+                                                    <span class="fs-xs">مكتمل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-success fw-bold fs-sm">+350 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <div class="">
+                                                    <img src="imgs/avatar-2.jpg" class="table-rounded shrink-flex" />
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-column align-items-start justify-content-center">
+                                                    <span class="fs-sm">محمود النجار</span>
+                                                    <span class="fs-xs fw-medium fg-2">تحويل أموال</span>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <!-- why does flex here shrink the cell? -->
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3 d-flex">
+                                                    <img src="imgs/icons/arrow-down-solid-full.png"
+                                                        class="pill-icon shrink-flex" />
+                                                    <span class="fs-xs">دخل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-2 fw-bold fs-sm">١٤ أكتوبر ٢٠٢٥</td>
+                                        <td>
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3">
+                                                    <span class="fs-xs">مكتمل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-success fw-bold fs-sm">+350 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <div class="">
+                                                    <img src="imgs/avatar-2.jpg" class="table-rounded shrink-flex" />
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-column align-items-start justify-content-center">
+                                                    <span class="fs-sm">محمود النجار</span>
+                                                    <span class="fs-xs fw-medium fg-2">تحويل أموال</span>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <!-- why does flex here shrink the cell? -->
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3 d-flex">
+                                                    <img src="imgs/icons/arrow-down-solid-full.png"
+                                                        class="pill-icon shrink-flex" />
+                                                    <span class="fs-xs">دخل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-2 fw-bold fs-sm">١٤ أكتوبر ٢٠٢٥</td>
+                                        <td>
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3">
+                                                    <span class="fs-xs">مكتمل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-success fw-bold fs-sm">+350 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <div class="">
+                                                    <img src="imgs/avatar-2.jpg" class="table-rounded shrink-flex" />
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-column align-items-start justify-content-center">
+                                                    <span class="fs-sm">محمود النجار</span>
+                                                    <span class="fs-xs fw-medium fg-2">تحويل أموال</span>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <!-- why does flex here shrink the cell? -->
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3 d-flex">
+                                                    <img src="imgs/icons/arrow-down-solid-full.png"
+                                                        class="pill-icon shrink-flex" />
+                                                    <span class="fs-xs">دخل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-2 fw-bold fs-sm">١٤ أكتوبر ٢٠٢٥</td>
+                                        <td>
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3">
+                                                    <span class="fs-xs">مكتمل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-success fw-bold fs-sm">+350 جنية</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="border-bottom-0">
+                                            <div class="d-flex">
+                                                <div class="">
+                                                    <img src="imgs/avatar-2.jpg" class="table-rounded shrink-flex" />
+                                                </div>
+                                                <div
+                                                    class="d-flex flex-column align-items-start justify-content-center">
+                                                    <span class="fs-sm">محمود النجار</span>
+                                                    <span class="fs-xs fw-medium fg-2">تحويل أموال</span>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td scope="row" class="border-bottom-0">
+                                            <!-- why does flex here shrink the cell? -->
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3 d-flex">
+                                                    <img src="imgs/icons/arrow-down-solid-full.png"
+                                                        class="pill-icon shrink-flex" />
+                                                    <span class="fs-xs">دخل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-2 fw-bold fs-sm border-bottom-0">١٤ أكتوبر ٢٠٢٥</td>
+                                        <td class="border-bottom-0">
+                                            <div class="d-flex justify-content-start align-items-center">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center theme-success theme-subtle rounded-7 px-3">
+                                                    <span class="fs-xs">مكتمل</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="fg-success fw-bold fs-sm border-bottom-0">+350 جنية</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- End Section -->
+
+            <div class="d-grid gap-5 c-3-grid">
+                <div class="border border-1 rounded-4 p-4 ms-3">
+                    <div class="container pt-4">
+                        <div class="d-flex justify-content-between">
+                            <p class="text-start fw-bold">الفواتير الشهرية</p>
+                            <span class="fs-sm fg-2 fw-bold">عرض الكل</span>
+                        </div>
+                    </div>
+                    <!-- Budget Card -->
+                    <div class="d-flex flex-column border border-1 rounded-4 theme-primary theme-subtle p-5 mb-4">
+                        <div class="d-flex flex-column">
+                            <span class="fs-sm fw-bold">إجمالي الميزانية</span>
+                            <span class="fw-bold fs-xl">10000 جنية</span>
+                        </div>
+                        <div class="d-flex flex-column align-items-start align-self-end pb-3">
+                            <span class="fs-sm fw-bold fg-2">المتبقي</span>
+                            <span class="fw-bold fs-md fg-success">1750 جنية</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="fs-xs fw-bold fg-2">المستخدم: 8250 جنية</span>
+                            <span class="fs-xs fw-bold fg-2">82.5%</span>
+
+                        </div>
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-primary rounded-pill" style="width: 82.5%"></div>
+                        </div>
+                        <!-- End of Budget Card -->
+                    </div>
+                    <!-- New Card -->
+                    <div class="d-flex flex-column border border-1 rounded-4 p-5 mb-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="icon-invoice d-flex justify-content-center bg-purple">
+                                <img class="w-100" src="imgs/icons/heart-solid-full-(2).png" alt="">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <span class="fs-sm fw-bold">إجمالي الميزانية</span>
+                                <span class="fw-bold fs-xs fg-3">10000 جنية</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-start align-self-end pb-3">
+                            <span class="fs-sm fw-bold fg-2">المتبقي</span>
+                            <span class="fw-bold fs-md fg-success">1750 جنية</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fs-xs fw-bold fg-2">المستخدم: 8250 جنية</span>
+                            <span
+                                class="d-inline-block align-self-start theme-success theme-subtle rounded-pill px-2  fs-xs fw-bold fg-2">متبقي
+                                50%</span>
+
+                        </div>
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-purple rounded-pill" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <!-- New Card -->
+                    <div class="d-flex flex-column border border-1 rounded-4 p-5 mb-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="icon-invoice d-flex justify-content-center bg-purple">
+                                <img class="w-100" src="imgs/icons/heart-solid-full-(2).png" alt="">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <span class="fs-sm fw-bold">إجمالي الميزانية</span>
+                                <span class="fw-bold fs-xs fg-3">10000 جنية</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-start align-self-end pb-3">
+                            <span class="fs-sm fw-bold fg-2">المتبقي</span>
+                            <span class="fw-bold fs-md fg-success">1750 جنية</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fs-xs fw-bold fg-2">المستخدم: 8250 جنية</span>
+                            <span
+                                class="d-inline-block align-self-start theme-success theme-subtle rounded-pill px-2  fs-xs fw-bold fg-2">متبقي
+                                50%</span>
+
+                        </div>
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-purple rounded-pill" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <!-- New Card -->
+                    <div class="d-flex flex-column border border-1 rounded-4 p-5 mb-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="icon-invoice d-flex justify-content-center bg-purple">
+                                <img class="w-100" src="imgs/icons/heart-solid-full-(2).png" alt="">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <span class="fs-sm fw-bold">إجمالي الميزانية</span>
+                                <span class="fw-bold fs-xs fg-3">10000 جنية</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-start align-self-end pb-3">
+                            <span class="fs-sm fw-bold fg-2">المتبقي</span>
+                            <span class="fw-bold fs-md fg-success">1750 جنية</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fs-xs fw-bold fg-2">المستخدم: 8250 جنية</span>
+                            <span
+                                class="d-inline-block align-self-start theme-success theme-subtle rounded-pill px-2  fs-xs fw-bold fg-2">متبقي
+                                50%</span>
+
+                        </div>
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-purple rounded-pill" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <!-- New Card -->
+                    <div class="d-flex flex-column border border-1 rounded-4 p-5 mb-1">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="icon-invoice d-flex justify-content-center bg-purple">
+                                <img class="w-100" src="imgs/icons/heart-solid-full-(2).png" alt="">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <span class="fs-sm fw-bold">إجمالي الميزانية</span>
+                                <span class="fw-bold fs-xs fg-3">10000 جنية</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-start align-self-end pb-3">
+                            <span class="fs-sm fw-bold fg-2">المتبقي</span>
+                            <span class="fw-bold fs-md fg-success">1750 جنية</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fs-xs fw-bold fg-2">المستخدم: 8250 جنية</span>
+                            <span
+                                class="d-inline-block align-self-start theme-success theme-subtle rounded-pill px-2  fs-xs fw-bold fg-2">متبقي
+                                50%</span>
+
+                        </div>
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-purple rounded-pill" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second -->
+                <div class="d-flex flex-column">
+                    <div class="border border-1 rounded-4 p-2 mb-3">
+                        <div class="container pt-4">
+                            <div class="d-flex justify-content-between">
+                                <p class="text-start fw-bold">الدخل مقابل المصروفات</p>
+                                <span class="fs-xs fg-2 ">التحليل</span>
+                            </div>
+                            <div class="d-flex justify-content-center gap-3">
+                                <div class="sm-square bg-success"></div>
+                                <span class="fs-xs fg-3">الدخل</span>
+                                <div class="sm-square bg-danger ms-3"></div>
+                                <span class="fs-xs fg-3">المصروفات</span>
+
+                            </div>
+                            <div class="d-flex justify-content-around mt-9 gap-4 p-5">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="d-flex align-items-end mb-3">
+                                        <div class="green-bar bg-success"></div>
+                                        <div class="red-bar bg-danger ms-1"></div>
+                                    </div>
+                                    <span class="fs-xs fg-4">الاسبوع 1</span>
+                                </div>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="d-flex align-items-end mb-3">
+                                        <div class="green-bar bg-success"></div>
+                                        <div class="red-bar bg-danger ms-1"></div>
+                                    </div>
+                                    <span class="fs-xs fg-4">الاسبوع 1</span>
+                                </div>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="d-flex align-items-end mb-3">
+                                        <div class="green-bar bg-success"></div>
+                                        <div class="red-bar bg-danger ms-1"></div>
+                                    </div>
+                                    <span class="fs-xs fg-4">الاسبوع 1</span>
+                                </div>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="d-flex align-items-end mb-3">
+                                        <div class="green-bar bg-success"></div>
+                                        <div class="red-bar bg-danger ms-1"></div>
+                                    </div>
+                                    <span class="fs-xs fg-4">الاسبوع 1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 column. 2nd card -->
+                    <div class="border border-1 rounded-4 border-subtle shadow-sm px-5 pt-4 pb-8 ">
+                        <div class="container pt-4">
+                            <div class="d-flex justify-content-between">
+                                <p class="text-start fw-bold">ملخص الحساب</p>
+                                <span class="fs-sm fg-2 fw-bold">التفاصيل</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column mb-4 px-2">
+                            <div class="d-flex align-items-center gap-3 bg-secondary bg-1 rounded-4 p-5">
+                                <div class="icon-invoice d-flex justify-content-center bg-purple">
+                                    <img class="w-100" src="imgs/icons/heart-solid-full-(2).png" alt="">
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <span class="fs-sm fw-bold">حساب جاري</span>
+                                    <span class="fw-bold fs-xs fg-3">بنك مصر [•••• 4532]</span>
+                                </div>
+                                <span class="ms-auto fw-bold fs-sm">8,450 جنية</span>
+                            </div>
+
+                        </div>
+                        <div class="d-flex flex-column mb-4 px-2">
+                            <div class="d-flex align-items-center gap-3 bg-secondary bg-1 rounded-4 p-5">
+                                <div class="icon-invoice d-flex justify-content-center bg-purple">
+                                    <img class="w-100" src="imgs/icons/heart-solid-full-(2).png" alt="">
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <span class="fs-sm fw-bold">حساب جاري</span>
+                                    <span class="fw-bold fs-xs fg-3">بنك مصر [•••• 4532]</span>
+                                </div>
+                                <span class="ms-auto fw-bold fs-sm">8,450 جنية</span>
+                            </div>
+
+                        </div>
+                        <div class="d-flex flex-column mb-4 px-2">
+                            <div class="d-flex align-items-center gap-3 bg-secondary bg-1 rounded-4 p-5">
+                                <div class="icon-invoice d-flex justify-content-center bg-purple">
+                                    <img class="w-100" src="imgs/icons/heart-solid-full-(2).png" alt="">
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <span class="fs-sm fw-bold">حساب جاري</span>
+                                    <span class="fw-bold fs-xs fg-3">بنك مصر [•••• 4532]</span>
+                                </div>
+                                <span class="ms-auto fw-bold fs-sm">8,450 جنية</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Third Column -->
+                <div class="connected cards">
+                    <div
+                        class="d-flex flex-column border border-1 rounded-4 border-subtle shadow-sm px-5 pt-4 pb-8 me-4 ">
+                        <div class="container pt-4">
+                            <div class="d-flex justify-content-between">
+                                <p class="text-start fw-bold">ملخص الحساب</p>
+                                <span class="fs-sm fg-2 fw-bold">التفاصيل</span>
+                            </div>
+                        </div>
+                        <div class="bank-card bg-danger align-self-center py-10 px-7 fg-white mb-5">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div
+                                    class="d-flex flex-column justify-content-center px-5 py-3 card-outer-rec rounded-4">
+                                    <div class="card-inner-rec bg-secondary bg-1"></div>
+                                </div>
+                                <div class="">
+                                    <img class="logo-width" src="imgs/icons/cc-mastercard-brands-solid-full.png" alt="">
+                                </div>
+                            </div>
+                            <div class="container mt-8 mb-1 fw-bold">**** **** **** 9090</div>
+                            <div class="d-flex justify-content-between mt-1">
+                                <div class="d-flex flex-column fg-white">
+                                    <span class="fs-xs">حامل البطاقه</span>
+                                    <span class="fs-xs fw-bold">سيف اسامه</span>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <span class="fs-xs">تنتهي</span>
+                                    <span class="fs-sm">12/26</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bank-card bg-danger align-self-center py-10 px-7 fg-white mb-5">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div
+                                    class="d-flex flex-column justify-content-center px-5 py-3 card-outer-rec rounded-4">
+                                    <div class="card-inner-rec bg-secondary bg-1"></div>
+                                </div>
+                                <div class="">
+                                    <img class="logo-width" src="imgs/icons/cc-mastercard-brands-solid-full.png" alt="">
+                                </div>
+                            </div>
+                            <div class="container mt-8 mb-1 fw-bold">**** **** **** 9090</div>
+                            <div class="d-flex justify-content-between mt-1">
+                                <div class="d-flex flex-column fg-white">
+                                    <span class="fs-xs">حامل البطاقه</span>
+                                    <span class="fs-xs fw-bold">سيف اسامه</span>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <span class="fs-xs">تنتهي</span>
+                                    <span class="fs-sm">12/26</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bank-card bg-danger align-self-center py-10 px-7 fg-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div
+                                    class="d-flex flex-column justify-content-center px-5 py-3 card-outer-rec rounded-4">
+                                    <div class="card-inner-rec bg-secondary bg-1"></div>
+                                </div>
+                                <div class="">
+                                    <img class="logo-width" src="imgs/icons/cc-mastercard-brands-solid-full.png" alt="">
+                                </div>
+                            </div>
+                            <div class="container mt-8 mb-1 fw-bold">**** **** **** 9090</div>
+                            <div class="d-flex justify-content-between mt-1">
+                                <div class="d-flex flex-column fg-white">
+                                    <span class="fs-xs">حامل البطاقه</span>
+                                    <span class="fs-xs fw-bold">سيف اسامه</span>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <span class="fs-xs">تنتهي</span>
+                                    <span class="fs-sm">12/26</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+    </div>
+
+    </main>
+
+    </div>
+
+    <script type="module" src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
